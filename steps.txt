@@ -1,0 +1,16 @@
+// FOR PROJECT SETUP
+django-admin startproject weatherdetector -> for the core project setup 
+python manage.py startapp weather -> for the app project
+in setting change -> "DIRS": [BASE_DIR / "templates"], add the app name to installed_apps
+in urls -> add include 
+
+now in my myapp ,, add the file urls.py and write index route
+
+
+//FOR ADMIN DATABASE
+python manage.py migrate
+python manage.py createsuperuser
+ 
+afther creating model and regsitering ,,,
+python manage.py makemigrations
+python manage.py migrate

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+    ::selection {
+      background: #4f46e5; /* Indigo */
+      color: white;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white flex items-center justify-center transition-all duration-500">
+
+  <div class="bg-white/5 border border-white/10 backdrop-blur-2xl p-10 rounded-3xl shadow-2xl w-full max-w-2xl transition-all duration-500">
+    
+    <h1 class="text-4xl font-bold mb-2 text-white drop-shadow-md">
+      📍 {{ city }}, <span class="text-indigo-400">{{ country }}</span>
+    </h1>
+    <p class="text-xl mb-8 capitalize text-gray-300 tracking-wide">
+      {{ weather_main }} — {{ description }}
+    </p>
+    
+    <div class="grid grid-cols-2 gap-y-6 gap-x-8 text-left text-gray-200 text-base">
+      <div><span class="font-semibold text-indigo-300">🌡 Temperature:</span> {{ temperature }}°C</div>
+      <div><span class="font-semibold text-indigo-300">🤗 Feels Like:</span> {{ feels_like }}°C</div>
+      <div><span class="font-semibold text-indigo-300">🔻 Min Temp:</span> {{ temp_min }}°C</div>
+      <div><span class="font-semibold text-indigo-300">🔺 Max Temp:</span> {{ temp_max }}°C</div>
+      <div><span class="font-semibold text-indigo-300">💧 Humidity:</span> {{ humidity }}%</div>
+      <div><span class="font-semibold text-indigo-300">📈 Pressure:</span> {{ pressure }} hPa</div>
+      <div><span class="font-semibold text-indigo-300">🌬 Wind Speed:</span> {{ wind_speed }} m/s</div>
+      <div><span class="font-semibold text-indigo-300">🌅 Sunrise:</span> {{ sunrise }}</div>
+      <div><span class="font-semibold text-indigo-300">🌇 Sunset:</span> {{ sunset }}</div>
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-2 rounded-full shadow-lg transition duration-300">
+        🔙 Back to Home
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
