@@ -25,7 +25,8 @@ SECRET_KEY = "django-insecure-g6e5((ubvre=ftgo!$)f11z&l5wmbqh0wj!z0)u(^l2z36zjj#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://watavaran-app.onrender.com/",
+                 "localhost", "127.0.1:8000"]
 
 
 # Application definition
